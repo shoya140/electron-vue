@@ -47,11 +47,11 @@ let rendererConfig = {
     {{#if usesass}}
       {
         test: /\.scss$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader']
+        use: ['vue-style-loader', 'css-loader', 'sass-loader?data=@import "./src/renderer/globals";']
       },
       {
         test: /\.sass$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax']
+        use: ['vue-style-loader', 'css-loader', 'sass-loader?data=@import "./src/renderer/globals"']
       },
     {{/if}}
       {
